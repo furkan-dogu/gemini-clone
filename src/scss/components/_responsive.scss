@@ -1,0 +1,41 @@
+@use "../abstracts/mixin" as *;
+
+@include media-sm {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        &__container {
+            .greet {  
+                font-size: 42px;
+            }
+
+            .cards {
+                // margin-bottom: 45px;
+                .card {
+                    height: 150px;
+                }
+            }
+        }
+        &__bottom {
+            .search-box {
+                padding: 5px 10px;
+
+                div {
+                    gap: 5px;
+                }
+
+                input {
+                    flex: none;
+                    width: 150px;
+                    font-size: 14px;
+                }
+    
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}

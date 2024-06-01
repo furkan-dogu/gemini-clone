@@ -25,25 +25,25 @@ const Home = () => {
           <>
             <div className="greet">
               <p>
-                <span>Hello, Dev.</span>
+                <span>Merhaba,</span>
               </p>
-              <p>How can I help you today?</p>
+              <p>Bugün nasıl yardımcı olabilirim?</p>
             </div>
             <div className="cards">
               <div className="card">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                <p>Ekonomi Kavramları</p>
                 <img src={assets.compass_icon} alt="compass_icon" />
               </div>
               <div className="card">
-                <p>Briefly summarize this concept: urban planning</p>
+                <p>Kariyer alanları</p>
                 <img src={assets.bulb_icon} alt="bulb_icon" />
               </div>
               <div className="card">
-                <p>Brainstorm team bonding activities for our work retreat</p>
+                <p>Müzik Tarihi</p>
                 <img src={assets.message_icon} alt="message_icon" />
               </div>
               <div className="card">
-                <p>Improve the readability of the following code</p>
+                <p>Pişirme trandleri</p>
                 <img src={assets.code_icon} alt="code_icon" />
               </div>
             </div>
@@ -74,23 +74,24 @@ const Home = () => {
         <div className="search-box">
           <input
             type="text"
-            placeholder="Enter a prompt here"
+            placeholder="Buraya bir istem girin"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
           <div>
             <img src={assets.gallery_icon} alt="gallery_icon" />
             <img src={assets.mic_icon} alt="mic_icon" />
-            <img
-              src={assets.send_icon}
-              alt="send_icon"
-              onClick={() => onSent()}
-            />
+            {input ? (
+                <img
+                src={assets.send_icon}
+                alt="send_icon"
+                onClick={() => onSent()}
+                />
+            ) : null}         
           </div>
         </div>
         <p className="main__bottom--info">
-          Gemini may display inaccurate info, including about people, so
-          double-check its responses. Your privacy and Gemini Apps
+        Gemini, kişiler de dahil olmak üzere farklı konular hakkında yanlış bilgiler gösterebilir. Bu nedenle, verdiği yanıtların doğru olup olmadığını kontrol edin. <u>Gizliliğiniz ve Gemini Uygulamaları</u>
         </p>
       </div>
     </div>
