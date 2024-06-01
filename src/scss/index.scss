@@ -1,5 +1,6 @@
 @use "./base/reset";
 @use "./components/sidebar";
+@use "./components/home";
 
 #root {
     min-height: 100vh;
