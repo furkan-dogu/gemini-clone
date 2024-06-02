@@ -13,6 +13,12 @@ const Home = () => {
     input,
   } = useContext(Context);
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      onSent();
+    }
+  };
+
   return (
     <div className="main">
       <div className="nav">
@@ -31,7 +37,7 @@ const Home = () => {
             </div>
             <div className="cards">
               <div className="card">
-                <p>Ekonomi Kavramları</p>
+                <p>Ekonomi kavramları</p>
                 <img src={assets.compass_icon} alt="compass_icon" />
               </div>
               <div className="card">
@@ -39,11 +45,11 @@ const Home = () => {
                 <img src={assets.bulb_icon} alt="bulb_icon" />
               </div>
               <div className="card">
-                <p>Müzik Tarihi</p>
+                <p>Müzik tarihi</p>
                 <img src={assets.message_icon} alt="message_icon" />
               </div>
               <div className="card">
-                <p>Pişirme trandleri</p>
+                <p>Pişirme trendleri</p>
                 <img src={assets.code_icon} alt="code_icon" />
               </div>
             </div>
@@ -77,6 +83,7 @@ const Home = () => {
             placeholder="Buraya bir istem girin"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyPress}
           />
           <div>
             <img src={assets.gallery_icon} alt="gallery_icon" />

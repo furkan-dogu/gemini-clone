@@ -31,19 +31,20 @@
 
             span {
                 background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
-                -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             padding: 20px;
+            margin-bottom: 30px;
 
             .card {
-                height: 200px;
+                height: 180px;
                 padding: 15px;
                 background-color: #f0f4f9;
                 border-radius: 10px;
@@ -115,6 +116,7 @@
             margin: 15px auto;
             text-align: center;
             font-weight: 300;
+            max-width: 900px; 
         }
     }
 
@@ -165,6 +167,7 @@
                 font-size: 17px;
                 font-weight: 300;
                 line-height: 1.8;
+                margin-bottom: 10px;
             }
         }
     }
